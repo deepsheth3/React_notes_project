@@ -2,19 +2,27 @@ import React from "react";
 import Heading from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
-import { ReactDOM } from "react";
+import notes from "../notes"
+
+function entryNote(singleNote){
+    return(
+        <Note
+            key = {singleNote.key}
+            title = {singleNote.title}
+            content = {singleNote.content}
+        />
+    )
+}
 
 function App(){
     return(
-        <div >
+        
+        <div>
             <Heading/>
-            <Note/>
-            <Note/>
-            <Note/>
-            <Note/>
+            {notes.map(entryNote)}
             <Footer/>
         </div>
-        
+
     )
 }
     
