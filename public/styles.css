@@ -43,6 +43,8 @@ footer p {
   width: 240px;
   margin: 16px;
   float: left;
+  background: rgb(254, 250, 140);
+  box-shadow: 0 1px 3px rgb(245, 161, 4)
 }
 .note h1 {
   font-size: 1.1em;
@@ -53,4 +55,58 @@ footer p {
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.note button{
+  border: none;
+  outline: none;
+  position: relative;
+  float: right;
+  font-family: inherit;
+  background-color: rgb(238, 164, 43);
+  padding: 4px;
+  color: #000000;
+  width: 60px;
+  height: 30px;
+  border-radius: 10%;
+}
+
+form {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(246, 186, 113);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+form textarea{
+  font-size: 1em;
+}
+
+form button{
+  border-radius: 50%;
+  width: 2.1rem;
+  height: 2.1rem;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  border: none;
+  color: #fff;
+  background-color: #f5ba13;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 1px 3px rgb(245, 161, 4);
 }
