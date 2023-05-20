@@ -2,6 +2,8 @@ import react, { useState } from "react";
 
 function CreateArea(props){
 
+    const [isExpanded, setIsExpanded] = useState(false)
+
     const [note, setNote] = useState({
         title:'',
         content:''
@@ -26,12 +28,16 @@ function CreateArea(props){
         })
     }
 
+    function expand(){
+        setIsExpanded(true)
+    }
+
     return(
         <div>
             <form>
-                <input name='title' value={note.title} onChange={handleChange} placeholder="Title" autoSave="off"/>
-                <textarea name='content' value={note.content} onChange={handleChange} placeholder="Take a note..." rows={3}/>
-                <button onClick={submitNote}>Add</button>
+                {isExpanded && <input name='title' value={note.title} onChange={handleChange} placeholder="Title" autoSave="off"/>}
+                <textarea onClick={expand} name='content' value={note.content} onChange={handleChange} placeholder="Take a note..." rows={isExpanded?3:1}/>
+                {isExpanded && <button onClick={submitNote}>Add</button>}
             </form>
         </div>
     )
